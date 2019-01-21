@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.aop.business.POS;
 import com.aop.entity.CompraRequest;
-import com.aop.entity.CompraResponse;
 
 @RestController
 @RequestMapping("/pos")
@@ -22,7 +21,7 @@ public class VentasController {
 	@Autowired
 	private POS pos;
 
-	@PostMapping(value = "/comprar", consumes = MediaType.APPLICATION_JSON_UTF8_VALUE, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+	@PostMapping(value = {"/comprar", "/buy"}, consumes = MediaType.APPLICATION_JSON_UTF8_VALUE, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
 	public ResponseEntity<?> compra(@RequestBody CompraRequest request) {
 		log.info("Inicia el servicio de compras.");
 		return pos.comprar(request);
