@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class SpringAopApplication {
 
 	public static void main(String[] args) {
+		//Cambio para probar history.
 		SpringApplication.run(SpringAopApplication.class, args);
 	}
 
