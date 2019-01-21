@@ -1,6 +1,9 @@
 package com.aop.entity;
 
+import com.aop.aspecto.MyNotNull;
+
 public class CompraRequest extends BaseRequest{
+	@MyNotNull
 	private String producto;
 
 	public String getProducto() {
